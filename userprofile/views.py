@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 
-from apps.job.models import Job, Application
+from job.models import Job, Application
 from .models import ConversationMessage
-from apps.notification.utilities import create_notification
+from notification.utilities import create_notification
 
 @login_required
 def dashboard(request):

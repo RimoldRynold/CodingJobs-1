@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import AddJobForm, ApplicationForm
 from .models import Job
 
-from apps.notification.utilities import create_notification
+from notification.utilities import create_notification
 
 def search(request):
     return render(request, 'job/search.html')

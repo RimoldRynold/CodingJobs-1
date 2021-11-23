@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from apps.job.models import Job
-from apps.userprofile.models import Userprofile
+from job.models import Job
+from userprofile.models import Userprofile
 
 def frontpage(request):
     jobs = Job.objects.filter(status=Job.ACTIVE).order_by('-created_at')[0:3]
